@@ -1,0 +1,51 @@
+{
+  "name": "vue-express-ws-mongo-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "server:start": "node -r esm server/index.js",
+    "server:dev": "nodemon --watch server --exec npm run server:start",
+    "server:lint": "eslint server/ --fix",
+    "app:dev": "vue-cli-service serve",
+    "app:build": "vue-cli-service build",
+    "app:lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@hapi/boom": "^7.4.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "esm": "^3.2.22",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "mongoose": "^5.5.5",
+    "morgan": "^1.9.1",
+    "winston": "^3.2.1",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "nodemon": "^1.19.0",
+    "vue": "^2.6.10",
+    "vue-native-websocket": "^2.0.13",
+    "vue-router": "^3.0.6",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
