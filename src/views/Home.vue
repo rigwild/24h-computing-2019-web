@@ -50,9 +50,8 @@
 <script>
 import MyComponent from '@/components/MyComponent'
 
-import { serverPort } from '../../config'
 import { WS_SENT_EXAMPLE } from '@/../config.messagesId'
-import { API_ROUTES, buildURI, API_CALL } from '@/functions'
+import { exampleInsertDb } from '@/apiWrapper'
 
 export default {
   name: 'Home',
@@ -91,11 +90,8 @@ export default {
     },
 
     async sendDbMessage() {
-      const route = API_ROUTES.exampleInsertDb(this.message)
-      const URI = buildURI(false, 'localhost', serverPort, route)
-
       try {
-        const data = await API_CALL(URI, { method: 'POST' })
+        const data = await exampleInsertDb(this.message)
         console.log('API response (It was expected):')
         console.log(data)
         this.apiResponseMessage = data
@@ -107,11 +103,8 @@ export default {
     },
 
     async sendDbMessageThrow() {
-      const route = API_ROUTES.exampleInsertDb('42')
-      const URI = buildURI(false, 'localhost', serverPort, route)
-
       try {
-        const data = await API_CALL(URI, { method: 'POST' })
+        const data = await exampleInsertDb('42')
         console.warn('API response (Should have thrown!!)')
         console.warn(data)
       }
