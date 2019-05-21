@@ -10,6 +10,8 @@ const connectDb = async () => {
   mongoose.connection.on('error', err => dbLogger.error(formatError(err)))
 
   if (!TEST_MODE) dbLogger.info(formatLog('The database connection was established.'))
+
+  return mongoose.connection
 }
 
 export default connectDb

@@ -29,7 +29,7 @@ export const API_CALL = async (URI, options = {}) => {
  */
 export const exampleInsertDb = message => {
   const route = API_ROUTES.exampleInsertDb(message)
-  const URI = buildURI(false, 'localhost', serverPort, route)
+  const URI = buildURI('localhost', serverPort, route)
 
   return API_CALL(URI, { method: 'POST' })
 }

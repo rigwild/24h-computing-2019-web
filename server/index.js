@@ -34,12 +34,12 @@ app.use(cors())
 // Parse JSON body
 app.use(bodyParser.json())
 
-// Load all the API routes in the server
-app.use(apiPrefix, routes)
-
 // Serve client files
 if (serveClient) app.use('/', express.static(path.resolve(__dirname, '../dist')))
 else app.get('*', (req, res) => res.status(404).send('Client is not served.'))
+
+// Load all the API routes in the server
+app.use(apiPrefix, routes)
 
 // Error handler (Middleware called when throwing in another middleware)
 app.use(errorHandler)

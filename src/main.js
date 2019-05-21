@@ -2,12 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import { serverPort } from '../config'
+import { buildWsURI } from '../src/functions'
 import VueNativeSock from 'vue-native-websocket'
 
 Vue.config.productionTip = false
 
 // Connect the WebSocket client to the store
-Vue.use(VueNativeSock, `ws://localhost:${serverPort}`, {
+Vue.use(VueNativeSock, buildWsURI('localhost', serverPort), {
   reconnection: true,
   reconnectionAttempts: 5,
   reconnectionDelay: 5000,

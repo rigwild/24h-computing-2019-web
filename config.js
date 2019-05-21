@@ -14,3 +14,6 @@ export const mongoDatabaseURI = process.env.MONGO_URI || 'mongodb://localhost:27
 
 // Should the server serve client files from the `/dist` directory
 export const serveClient = process.env.SERVE_CLIENT === 'true' || true
+
+// MongoDB database connection URI
+export const jwtSecret = process.env.SECRET || 'my-secret'

@@ -27,6 +27,7 @@ services:
             SERVE_CLIENT: "${SERVE_CLIENT:-true}"
             PORT: "5000"
             MONGO_URI: "${MONGO_URI:-mongodb://mongo:27017/myappdb}"
+            MONGO_URI: "${SECRET}"
         links:
             - mongo
         volumes:
