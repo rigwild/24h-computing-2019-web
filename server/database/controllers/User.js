@@ -60,12 +60,17 @@ export default class User {
       if (!isValidPassword) throw new Error('Invalid password')
 
       // Sign a JWT and return it
-      const token = jwt.sign({ id: user._id, username: user.username }, jwtSecret)
+      const token = jwt.sign({
+        id: user._id,
+        username: user.username,
+        role: user.role
+      }, jwtSecret)
 
       this.log(`User logged in. username=${user.username}, id=${user.id}`)
       return {
         token,
-        username: user.username
+        username: user.username,
+        role: user.role
       }
     }
     catch (err) {

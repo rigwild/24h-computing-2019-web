@@ -16,7 +16,7 @@ Use the following environment variables to configure the application.
 | `PORT` | `5000` | The port used by the started application |  ✅  | ✅ |
 | `SERVE_CLIENT` | `true` | Should the server serve client (Fully local application) |  ✅  | ⬜️ |
 | `MONGO_URI` | `mongodb://localhost/webexpe` | MongoDB database connection URI |  ✅  | ⬜️ |
-| `SECRET` | `my-secret` | The users' sessions secret |
+| `SECRET` | `my-secret` | The JWT secret |
 
 Configure more deeply the way the app works by modifying *[config.js](config.js)*.
 
@@ -26,7 +26,7 @@ Configure more deeply the way the app works by modifying *[config.js](config.js)
 | `serverPort` | `5000` | The port used by the server |
 | `mongoDatabaseURI` | `mongodb://localhost/webexpe` | MongoDB database connection URI |
 | `serveClient` | `true` | Should the server serve client files from the `/dist` directory |
-| `sessionSecret` | `my-secret` | The users' sessions secret |
+| `jwtSecret` | `my-secret` | The users' sessions secret |
 | `logger` | Logs : `logs/server.combined.log` Errors : `logs/server.error.log` | Default application logger |
 | `wsLogger` | Logs : `logs/ws.log` Errors : `logs/ws.error.log` | WebSocket logger configuration |
 | `dbLogger` | Logs : `logs/db.log` Errors : `logs/db.error.log` | Database logger configuration |

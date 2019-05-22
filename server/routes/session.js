@@ -4,11 +4,12 @@ import express from 'express'
 import boom from '@hapi/boom'
 
 import { asyncMiddleware, checkRequiredParameters } from '../functions'
+import { checkNoJwt } from '../middlewares/auth'
 import db from '../database/controllers'
 
 const router = express.Router()
 
-router.post('/register', asyncMiddleware(async (req, res) => {
+router.post('/register', checkNoJwt, asyncMiddleware(async (req, res) => {
   // Check the request contains all the required parameters
   checkRequiredParameters(['username', 'password'], req.body)
 
@@ -27,7 +28,7 @@ router.post('/register', asyncMiddleware(async (req, res) => {
 }))
 
 
-router.post('/login', asyncMiddleware(async (req, res) => {
+router.post('/login', checkNoJwt, asyncMiddleware(async (req, res) => {
   // Check the request contains all the required parameters
   checkRequiredParameters(['username', 'password'], req.body)
 
@@ -35,7 +36,7 @@ router.post('/login', asyncMiddleware(async (req, res) => {
 
   const loginObj = await db.User.login(username, password)
     .catch(err => {
-      throw boom.boomify(err, { statusCode: 401 })
+      throw boom.boomify(err, { statusCode: 403 })
     })
 
   res.json({

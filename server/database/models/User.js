@@ -13,6 +13,10 @@ export default mongoose.model('User', new Schema({
     select: false,
     required: true
   },
+  role: {
+    type: String,
+    default: 'user'
+  },
   joinDate: {
     type: Date,
     default: () => new Date()
