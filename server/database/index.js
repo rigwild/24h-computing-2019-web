@@ -6,7 +6,7 @@ import { dbLogger } from '../winston.config'
 import { formatLog, formatError } from '../functions'
 
 const connectDb = async () => {
-  await mongoose.connect(mongoDatabaseURI, { useNewUrlParser: true, useFindAndModify: false })
+  await mongoose.connect(mongoDatabaseURI, { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true })
   mongoose.connection.on('error', err => dbLogger.error(formatError(err)))
 
   if (!TEST_MODE) dbLogger.info(formatLog('The database connection was established.'))

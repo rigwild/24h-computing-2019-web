@@ -36,7 +36,7 @@ router.post('/login', checkNoJwt, asyncMiddleware(async (req, res) => {
 
   const loginObj = await db.User.login(username, password)
     .catch(err => {
-      throw boom.boomify(err, { statusCode: 403 })
+      throw boom.boomify(err, { statusCode: 401 })
     })
 
   res.json({

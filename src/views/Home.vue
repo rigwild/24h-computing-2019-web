@@ -1,49 +1,47 @@
 <template>
-  <div style="width:30%;margin:0 auto;font-family:arial">
+  <div>
     <h1>
       This is the homepage
     </h1>
 
-    <br><br><br>
+    <b-card>
+      <h4>Here is an example component having a `message` prop</h4>
+      <div>
+        <transition name="fade" mode="out-in">
+          <my-component :message="message" :key="message" />
+        </transition>
+      </div>
+      <b-button @click="randomizeMessage">Randomize message</b-button>
+    </b-card>
 
-    <h4>Here is an example component having a `message` prop</h4>
-    <div>
-      <transition name="fade" mode="out-in">
-        <my-component :message="message" :key="message" />
-      </transition>
-    </div>
-    <div>
-      <button @click="randomizeMessage">Randomize message</button>
-    </div>
+    <b-card>
+      <div>
+        <h4>Send the message using WebSockets!</h4>
+        (Open devtools -> Network, search `ws://localhost:5000` and see sent messages!)
+      </div>
+      <div>
+        <b-button @click="sendWsMessage">Send</b-button>
+        <div>WebSocket received message:</div>
+        <pre>{{ wsResponseMessage }}</pre>
+      </div>
+    </b-card>
 
-    <br><br><br>
+    <b-card>
+      <div>
+        <h4>Add the message to the database</h4>
+      </div>
+      <div>
+        <b-button @click="sendDbMessage">Send</b-button>
+        <div>API response:</div>
+        <pre>{{ apiResponseMessage }}</pre>
+      </div>
+    </b-card>
 
-    <div>
-      <h4>Send the message using WebSockets!</h4>
-      (Open devtools -> Network, search `ws://localhost:5000` and see sent messages!)
-    </div>
-    <div>
-      <button @click="sendWsMessage">Send</button>
-      <div>WebSocket received message:</div>
-      <pre>{{ wsResponseMessage }}</pre>
-    </div>
-
-    <br><br><br>
-
-    <div>
-      <h4>Add the message to the database</h4>
-    </div>
-    <div>
-      <button @click="sendDbMessage">Send</button>
-      <div>API response:</div>
-      <pre>{{ apiResponseMessage }}</pre>
-    </div>
-
-    <br><br><br>
-
-    <button @click="sendDbMessageThrow">Trigger an API error</button>
-    <div>Error:</div>
-    <pre>{{ apiErrorMessage }}</pre>
+    <b-card>
+      <b-button @click="sendDbMessageThrow">Trigger an API error</b-button>
+      <div>Error:</div>
+      <pre>{{ apiErrorMessage }}</pre>
+    </b-card>
   </div>
 </template>
 

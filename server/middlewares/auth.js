@@ -34,7 +34,6 @@ export const checkNoJwt = (req, res, next) => {
  * @throws The JWT role does not match with the needed role
  */
 export const checkJwtRole = neededRole => (req, res, next) => {
-  console.log(req.user)
   if (req.user && req.user.role === neededRole)
     return next()
   throw boom.forbidden(`You need the "${neededRole}" role to access this resource.`)
