@@ -39,6 +39,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
     "nodemon": "^1.19.0",
+    "svgmap": "^1.2.0",
     "vue": "^2.6.10",
     "vue-native-websocket": "^2.0.13",
     "vue-promised": "^1.2.0",

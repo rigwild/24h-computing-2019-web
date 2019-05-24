@@ -7,6 +7,7 @@ export const API_PREFIX = apiPrefix
 export const API_ROUTES = {
   ping: `${API_PREFIX}/`,
   login: `${API_PREFIX}/login`,
+  countries: `${API_PREFIX}/countries`,
   register: `${API_PREFIX}/register`,
   profile: id => `${API_PREFIX}/profile${id ? `/${id}` : ''}`,
 
@@ -115,6 +116,10 @@ export const profile = id => {
   return API_CALL(buildURI(host, serverPort, API_ROUTES.profile(id)))
 }
 
+export const countries = () => {
+  return API_CALL(buildURI(host, serverPort, API_ROUTES.countries))
+}
+
 
 export default {
   API_CALL,
@@ -122,5 +127,6 @@ export default {
   login,
   logout,
   register,
-  profile
+  profile,
+  countries
 }

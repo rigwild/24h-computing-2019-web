@@ -3,41 +3,43 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
-import UserModel from '../models/User'
 import { TEST_MODE, jwtSecret } from '../../../config'
 import { dbLogger } from '../../winston.config'
 import { formatLog, formatError } from '../../functions'
 
-export default class User {
-  static get Model() {
-    return UserModel
-  }
+export default CustomModel => ({
+  get Model() {
+    return CustomModel
+  },
 
-  static log(data, format = true) {
+  log(data, format = true) {
     if (!TEST_MODE) dbLogger.info(format ? formatLog(data) : data)
-  }
+  },
 
   /**
    * Register a new user
    * @param {String} username The username of the new user (unique)
    * @param {String} password The password of the new user (will be hashed)
+   * @param {String} role The role of the new user
+   * @param {Object} address The full address of the new user
+   * @param {String} phone The full address of the new user
    * @returns {Promise<Object>} The newly registered user username
    * @throws The username is already taken
    */
-  static async register(username, password) {
+  async register(username, password, role, address, phone) {
     try {
       // Hash the password and create the user
       const hash = await bcrypt.hash(password, 10)
-      const doc = await UserModel.create({ username, password: hash })
+      const doc = await CustomModel.create({ username, password: hash, role, address, phone })
 
       this.log(`New user was created. username=${username}, id=${doc.id}`)
-      return doc.username
+      return { username, role }
     }
     catch (err) {
       this.log(formatError(err), false)
       throw new Error(`Could not create the user. ${err.message}`)
     }
-  }
+  },
 
   /**
    * @typedef {Object} LoginObject Represents a login object response
@@ -51,10 +53,12 @@ export default class User {
    * @returns {Promise<LoginObject>} A login object response
    * @throws The username is already taken
    */
-  static async login(username, password) {
+  async login(username, password) {
     try {
       // Check username exists
-      const user = await UserModel.findOne({ username }).select('+password')
+      const user = await CustomModel.findOne({ username }).select('+password')
+      if (!user) throw new Error('Unknown user')
+
       // Check password is valid
       const isValidPassword = await bcrypt.compare(password, user.password)
       if (!isValidPassword) throw new Error('Invalid password')
@@ -77,7 +81,7 @@ export default class User {
       this.log(formatError(err), false)
       throw new Error('Invalid username or password.')
     }
-  }
+  },
 
   /**
    * Deleted a registered user
@@ -85,11 +89,11 @@ export default class User {
    * @returns {Promise<String>} Id of the deleted user
    * @throws Could not find the user to delete
    */
-  static async delete(userId) {
-    const doc = await UserModel.findByIdAndDelete(userId)
+  async delete(userId) {
+    const doc = await CustomModel.findByIdAndDelete(userId)
     this.log(`A user was deleted. id=${doc.id}`)
     return doc.id
-  }
+  },
 
   /**
    * Find data of a registered user
@@ -97,9 +101,9 @@ export default class User {
    * @returns {Promise<Object>} the user's data
    * @throws Could not find the user
    */
-  static async find(userId) {
-    let user = await UserModel.findById(userId)
+  async find(userId) {
+    let user = await CustomModel.findById(userId)
     user.__v = undefined
     return user
   }
-}
+})
