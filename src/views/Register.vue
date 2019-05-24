@@ -1,11 +1,7 @@
 <template>
   <div>
-    <h1>
-      Register
-    </h1>
-
-    <div class="container">
-      <b-card header="Register">
+    <div class="container register-container">
+      <b-card header="Register to Koffee'leeis">
         <b-form @submit.prevent="register">
           <b-form-group id="input-group-1">
             <b-form-input

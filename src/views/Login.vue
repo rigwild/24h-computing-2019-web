@@ -1,11 +1,7 @@
 <template>
   <div>
-    <h1>
-      Login
-    </h1>
-
-    <div class="container">
-      <b-card header="Login">
+    <div class="container login-container">
+      <b-card header="Login to Koffee'leeis">
         <b-form @submit.prevent="onSubmit">
           <b-form-group id="input-group-1">
             <b-form-input
@@ -47,8 +43,8 @@ export default {
   },
   data() {
     return {
-      username: 'test',
-      password: 'test',
+      username: '',
+      password: '',
 
       loadingMessage: null,
       errorMessage: null
