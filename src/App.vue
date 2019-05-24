@@ -20,7 +20,7 @@
         <b-button :to="{ name: 'ProfileId', params: { id: '5ce5962e52d12e185cab5797' } }" size="sm">Profile/:id</b-button>
       </b-button-group>-->
 
-      <b-button-group v-if="loggedIn && userData.role === 'exporter'" class="mr-auto align-self-stretch nav-container">
+      <b-button-group v-if="loggedIn && userData.role === 'exporter'" class="mx-auto align-self-stretch nav-container">
         <!-- <b-button disabled size="sm">Exporter</b-button> -->
         <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Orders</b-button>
         <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Products</b-button>
@@ -28,7 +28,7 @@
 
       </b-button-group>
 
-      <b-button-group v-if="loggedIn && userData.role === 'importer'" class="mr-auto align-self-stretch nav-container">
+      <b-button-group v-if="loggedIn && userData.role === 'importer'" class="mx-auto align-self-stretch nav-container">
         <!-- <b-button disabled size="sm">Exporter</b-button> -->
         <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Buy</b-button>
         <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Open Orders</b-button>
@@ -50,6 +50,7 @@
         <router-view :key="$route.fullPath"/>
         <!--/ View injected here -->
       </transition>
+    <footer-comp />
     </div>
     <!--/ Pages content -->
   </div>
@@ -58,6 +59,8 @@
 <script>
 import { mapState, mapActions } from "vuex";
 import "./style.css";
+import FooterComp from '@/components/FooterComp'
+
 
 export default {
   computed: {
@@ -65,6 +68,9 @@ export default {
   },
   methods: {
     ...mapActions(["logout"])
+  },
+  components: {
+    FooterComp
   }
 };
 </script>
