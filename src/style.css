@@ -11,3 +11,62 @@
 .cursor {
   cursor: pointer;
 }
+
+.bg-mauve {
+  background-color: #53D;
+}
+
+.btn-pink {
+  background-color: #A3A;
+  border-color: #A3A;
+}
+
+.login-btn-container {
+  width: 100px;
+}
+
+.router-view-container {
+  margin-top: 8vh;
+}
+
+.app-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-size: 4vh;
+  font-style: italic;
+}
+
+.app-header {
+  height: 7vh;
+  box-shadow: 0px 5px 20px -6px rgba(0,0,0,0.75);
+  padding: 0;
+}
+
+.login-container, .register-container {
+  margin-top: 25vh;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  border-bottom: .8vh #AAA solid;
+  border-radius: 0;
+  width: 15vw;
+  padding-top: 1.6vh;
+  margin-right: 3px;
+  font-size: 2vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #AAA;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0,0,0,0.5);
+  border-color: #DDD;
+  color: #DDD;
+}
+
+.nav-btn.selected {
+  border-color: white;
+  color: white;
+}
