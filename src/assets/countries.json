@@ -1,0 +1,15 @@
+{
+    "countries": [
+        {
+        "nom" : "",
+        "descr" : "",
+        "capital" : "",
+        "habitant" : "",
+        "surface" : "",
+        "quantite_cafe" : "",
+        "quantite_pourcentage": "",
+        "drapeau" : ""
+        }
+        
+    ]
+}
