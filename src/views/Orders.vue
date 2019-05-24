@@ -1,11 +1,6 @@
 <template>
-  <div class="container">
-        <b-button class="primary-color">Commander</b-button>
-    <ul>
-      <li v-for="(order) of orders" :key="order.coffeeType">
-        <span>{{order}}</span> <br>
-      </li>
-    </ul>
+  <div class="container d-flex justify-content-around" style="margin-top:25vh;">
+     WIP : Oops Sorry !
   </div>
 </template>
 
@@ -22,7 +17,7 @@ export default {
     this.orders = await apiWrapper.getOrders();
   },
   data(){
-    return {orders:[null]}
+    return {orders:[]}
   }
 }
 </script>

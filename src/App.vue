@@ -47,7 +47,7 @@
     <div class="router-view-container">
       <transition name="fade" mode="out-in">
         <!-- View injected here -->
-        <router-view :key="$route.fullPath"/>
+        <router-view :key="$route.fullPath" style="min-height:81vh;"/>
         <!--/ View injected here -->
       </transition>
     <footer-comp class="footer-comp"/>
