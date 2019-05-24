@@ -1,6 +1,8 @@
 import { apiPrefix, serverPort } from '../config'
 import { buildURI } from './functions'
 
+const host = '172.16.97.58'
+
 export const API_PREFIX = apiPrefix
 export const API_ROUTES = {
   ping: `${API_PREFIX}/`,
@@ -58,7 +60,7 @@ export const API_CALL = async (URI, options = {}) => {
  */
 export const exampleInsertDb = message => {
   const route = API_ROUTES.exampleInsertDb(message)
-  const URI = buildURI('localhost', serverPort, route)
+  const URI = buildURI(host, serverPort, route)
 
   return API_CALL(URI, { method: 'POST' })
 }
@@ -79,7 +81,7 @@ export const logout = () => delToken()
 export const login = async (username, password) => {
   if (isLoggedIn()) throw new Error('You are already logged in.')
 
-  const data = await API_CALL(buildURI('localhost', serverPort, API_ROUTES.login), {
+  const data = await API_CALL(buildURI(host, serverPort, API_ROUTES.login), {
     method: 'POST',
     body: JSON.stringify({ username, password })
   })
@@ -96,7 +98,7 @@ export const login = async (username, password) => {
  */
 export const register = (username, password) => {
   if (isLoggedIn()) throw new Error('You are already logged in.')
-  return API_CALL(buildURI('localhost', serverPort, API_ROUTES.register), {
+  return API_CALL(buildURI(host, serverPort, API_ROUTES.register), {
     method: 'POST',
     body: JSON.stringify({ username, password })
   })
@@ -110,7 +112,7 @@ export const register = (username, password) => {
  */
 export const profile = id => {
   if (!isLoggedIn()) throw new Error('You need to be logged in.')
-  return API_CALL(buildURI('localhost', serverPort, API_ROUTES.profile(id)))
+  return API_CALL(buildURI(host, serverPort, API_ROUTES.profile(id)))
 }
 
 
