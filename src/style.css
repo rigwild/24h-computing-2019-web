@@ -13,7 +13,7 @@
 }
 
 .bg-mauve {
-  background-color: #53D;
+  background-color: #73D;
 }
 
 .btn-pink {
@@ -26,7 +26,7 @@
 }
 
 .router-view-container {
-  margin-top: 8vh;
+  margin-top: 7vh;
 }
 
 .app-title {
@@ -69,4 +69,20 @@
 .nav-btn.selected {
   border-color: white;
   color: white;
+}
+
+.add-btn-container {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.add-btn {
+  width: 20vw;
+}
+
+.footer-comp {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 7vh;
 }
