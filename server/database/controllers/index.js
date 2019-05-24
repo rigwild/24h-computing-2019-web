@@ -1,6 +1,7 @@
 'use strict'
 
 import Data from './Data'
-import User from './User'
+import Exporter from './Exporter'
+import Importer from './Importer'
 
-export default { Data, User }
+export default { Data, Exporter, Importer }
