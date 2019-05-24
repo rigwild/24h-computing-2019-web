@@ -1,0 +1,214 @@
+{
+  "countries": [
+    {
+      "name": "Independent State of Papua New Guinea",
+      "descr": "Papua New Guinea, officially the Independent State of Papua New Guinea (Tok Pisin: Independen Stet bilong Papua Niugini, Hiri Motu: Independen Stet bilong Papua Niu Gini) is a country in Oceania that occupies the eastern half of the island of New Guinea and its offshore islands in Melanesia, a region of the southwestern Pacific Ocean north of Australia. Its capital, located along its southeastern coast, is Port Moresby. The western half of New Guinea forms the Indonesian provinces of Papua and West Papua. ",
+      "capital": "Port Moresby",
+      "population": 8084999,
+      "area": 462840,
+      "coffee_quantity": 48000,
+      "countryCode": "pg",
+      "flag": "https://www.countryflags.io/pg/flat/64.png"
+    },
+    {
+      "name": "United Republic of Tanzania",
+      "descr": "Tanzania officially the United Republic of Tanzania (Swahili: Jamhuri ya Muungano wa Tanzania), is a country in eastern Africa within the African Great Lakes region. It borders Uganda to the north; Kenya to the northeast; Comoro Islands at the Indian Ocean to the east; Mozambique and Malawi to the south; Zambia to the southwest; and Rwanda, Burundi, and the Democratic Republic of the Congo to the west. Mount Kilimanjaro, Africa's highest mountain, is in north-eastern Tanzania. ",
+      "capital": "Dodoma",
+      "population": 55572201,
+      "area": 947303,
+      "coffee_quantity": 48000,
+      "countryCode": "tz",
+      "flag": "https://www.countryflags.io/tz/flat/64.png"
+    },
+    {
+      "name": "Republic of El Salvador",
+      "descr": "El Salvador, officially the Republic of El Salvador, is the smallest and the most densely populated country in Central America. It is bordered on the northeast by Honduras, on the northwest by Guatemala, and on the south by the Pacific Ocean. El Salvador's capital and largest city is San Salvador. As of 2016, the country had a population of approximately 6.34 million.",
+      "capital": "San Salvador",
+      "population": 21041,
+      "area": 6344722,
+      "coffee_quantity": 45720,
+      "countryCode": "sv",
+      "flag": "https://www.countryflags.io/sv/flat/64.png"
+    },
+    {
+      "name": "Republic of Ecuador",
+      "descr": "Ecuador officially the Republic of Ecuador, is a country in northwestern South America, bordered by Colombia on the north, Peru on the east and south, and the Pacific Ocean on the west. Ecuador also includes the Galápagos Islands in the Pacific, about 1,000 kilometres (620 mi) west of the mainland. The capital city is Quito, which is also the largest city.",
+      "capital": "Quito",
+      "population": 16385068,
+      "area": 283561,
+      "coffee_quantity": 42000,
+      "countryCode": "ec",
+      "flag": "https://www.countryflags.io/ec/flat/64.png"
+    },
+    {
+      "name": "Republic of Cameroon",
+      "descr": "Cameroon, officially the Republic of Cameroon, is a country in Central Africa. It is bordered by Nigeria to the west and north; Chad to the northeast; the Central African Republic to the east; and Equatorial Guinea, Gabon and the Republic of the Congo to the south. Cameroon's coastline lies on the Bight of Biafra, part of the Gulf of Guinea and the Atlantic Ocean. Although Cameroon is not an ECOWAS member state, it is geographically and historically in West Africa with the Southern Cameroons which now form her Northwest and Southwest Regions having a strong West African history. The country is sometimes identified as West African and other times as Central African due to its strategic position at the crossroads between West and Central Africa.",
+      "capital": "Yaoundé",
+      "population": 23439189,
+      "area": 475442,
+      "coffee_quantity": 34200,
+      "countryCode": "cm",
+      "flag": "https://www.countryflags.io/cm/flat/64.png"
+    },
+    {
+      "name": "Republic of Peru",
+      "descr": "Peru, is a country in western South America. It is bordered in the north by Ecuador and Colombia, in the east by Brazil, in the southeast by Bolivia, in the south by Chile, and in the west by the Pacific Ocean. Peru is a megadiverse country with habitats ranging from the arid plains of the Pacific coastal region in the west to the peaks of the Andes mountains vertically extending from the north to the southeast of the country to the tropical Amazon Basin rainforest in the east with the Amazon river.",
+      "capital": "Lima",
+      "population": 32495510,
+      "area": 1285216,
+      "coffee_quantity": 192000,
+      "countryCode": "pe",
+      "flag": "https://www.countryflags.io/pe/flat/64.png"
+    },
+    {
+      "name": "Republic of Guatemala",
+      "descr": "Guatemala, officially the Republic of Guatemala, is a country in Central America bordered by Mexico to the north and west, Belize and the Caribbean to the northeast, Honduras to the east, El Salvador to the southeast and the Pacific Ocean to the south. With an estimated population of around 16.6 million, it is the most populated country in Central America. Guatemala is a representative democracy; its capital and largest city is Nueva Guatemala de la Asunción, also known as Guatemala City.",
+      "capital": "Guatemala City",
+      "population": 17263239,
+      "area": 108889,
+      "coffee_quantity": 204000,
+      "countryCode": "gt",
+      "flag": "https://www.countryflags.io/gt/flat/64.png"
+    },
+    {
+      "name": "United Mexican States",
+      "descr": "Mexico, officially the United Mexican States, is a country in the southern portion of North America. It is bordered to the north by the United States; to the south and west by the Pacific Ocean; to the southeast by Guatemala, Belize, and the Caribbean Sea; and to the east by the Gulf of Mexico. Covering almost 2,000,000 square kilometres (770,000 sq mi), the nation is the fifth largest country in the Americas by total area and the 13th largest independent state in the world. With an estimated population of over 120 million people, the country is the tenth most populous state and the most populous Spanish-speaking state in the world, while being the second most populous nation in Latin America after Brazil. Mexico is a federation comprising 31 states and Mexico City, a special federal entity that is also the capital city and its most populous city. Other metropolises in the state include Guadalajara, Monterrey, Puebla, Toluca, Tijuana and León.",
+      "capital": "Mexico City",
+      "population": 126577691,
+      "area": 1972550,
+      "coffee_quantity": 234000,
+      "countryCode": "mx",
+      "flag": "https://www.countryflags.io/mx/flat/64.png"
+    },
+    {
+      "name": "Brazil",
+      "descr": "Brazil, is the largest country in both South America and Latin America. At 8.5 million square kilometers (3.2 million square miles) and with over 208 million people, Brazil is the world's fifth-largest country by area and the fifth most populous. Its capital is Brasília, and its most populated city is São Paulo. The federation is composed of the union of the 26 states, the Federal District, and the 5,570 municipalities. It is the largest country to have Portuguese as an official language and the only one in the Americas; it is also one of the most multicultural and ethnically diverse nations, due to over a century of mass immigration from around the world.",
+      "capital": "Brasilia",
+      "population": 210147125,
+      "area": 8515767,
+      "coffee_quantity": 2592000,
+      "countryCode": "br",
+      "flag": "https://www.countryflags.io/br/flat/64.png"
+    },
+    {
+      "name": "Vietnam",
+      "descr": "Vietnam, officially the Socialist Republic of Vietnam (Vietnamese: Cộng hòa xã hội chủ nghĩa Việt Nam), is the easternmost country on the Indochina Peninsula. With an estimated 94.6 million inhabitants as of 2016, it is the 15th most populous country in the world. Vietnam is bordered by China to the north, Laos and Cambodia to the west, part of Thailand to the southwest, and the Philippines, Malaysia, and Indonesia across the South China Sea to the east and southeast. Its capital city has been Hanoi since the reunification of North and South Vietnam in 1976, while its most populous city is Ho Chi Minh City. ",
+      "capital": "Hanoi",
+      "population": 92700000,
+      "area": 331212,
+      "coffee_quantity": 1650000,
+      "countryCode": "vn",
+      "flag": "https://www.countryflags.io/vn/flat/64.png"
+    },
+    {
+      "name": "Colombia",
+      "descr": "Colombia, officially the Republic of Colombia (Spanish: About this soundRepública de Colombia (help·info)), is a sovereign state largely situated in the northwest of South America, with territories in Central America. Colombia shares a border to the northwest with Panama, to the east with Venezuela and Brazil and to the south with Ecuador and Peru. It shares its maritime limits with Costa Rica, Nicaragua, Honduras, Jamaica, Haiti, and the Dominican Republic. Colombia is a unitary, constitutional republic comprising thirty-two departments, with the capital in Bogotá. ",
+      "capital": "Bogotá",
+      "population": 48759958,
+      "area": 1141748,
+      "coffee_quantity": 810000,
+      "countryCode": "co",
+      "flag": "https://www.countryflags.io/co/flat/64.png"
+    },
+    {
+      "name": "Indonesia",
+      "descr": "Indonesia, officially the Republic of Indonesia (Indonesian: Republik Indonesia , is a country in Southeast Asia, between the Indian and Pacific oceans. It is the world's largest island country, with more than seventeen thousand islands, and at 1,904,569 square kilometres (735,358 square miles), the 14th largest by land area and the 7th largest in combined sea and land area. With over 261 million people, it is the world's 4th most populous country as well as the most populous Muslim-majority country. Java, the world's most populous island, is home to more than half of the country's population.",
+      "capital": "Jakarta",
+      "population": 258705000,
+      "area": 1141748,
+      "coffee_quantity": 660000,
+      "countryCode": "id",
+      "flag": "https://www.countryflags.io/id/flat/64.png"
+    },
+    {
+      "name": "Ethiopia",
+      "descr": "Ethiopia, Tigrinya: ኢትዮጵያ, Oromo: Itoophiyaa, Somali: Itoobiya), officially the Federal Democratic Republic of Ethiopia (የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ, yeʾĪtiyoṗṗya Fēdēralawī Dēmokirasīyawī Rīpebilīk, About this soundlisten (help·info)), is a country in the northeastern part of Africa, popularly known as the Horn of Africa. It shares borders with Eritrea to the north, Djibouti to the northeast, and Somalia to the east, Sudan to the northwest, South Sudan to the west, and Kenya to the south. With over 102 million inhabitants, Ethiopia is the most populous landlocked country in the world and the second-most populous nation on the African continent that covers a total area of 1,100,000 square kilometres (420,000 sq mi). Its capital and largest city is Addis Ababa, which lies a few miles west of the East African Rift that splits the country into the Nubian Plate and the Somali Plate.",
+      "capital": "Addis Ababa",
+      "population": 92206005,
+      "area": 1104300,
+      "coffee_quantity": 384000,
+      "countryCode": "et",
+      "flag": "https://www.countryflags.io/et/flat/64.png"
+    },
+    {
+      "name": "Honduras",
+      "descr": "Honduras, officially the Republic of Honduras (Spanish: República de Honduras), is a country in Central America. The republic of Honduras is bordered to the west by Guatemala, to the southwest by El Salvador, to the southeast by Nicaragua, to the south by the Pacific Ocean at the Gulf of Fonseca, and to the north by the Gulf of Honduras, a large inlet of the Caribbean Sea. ",
+      "capital": "Tegucigalpa",
+      "population": 8576532,
+      "area": 112492,
+      "coffee_quantity": 348000,
+      "countryCode": "hn",
+      "flag": "https://www.countryflags.io/hn/flat/64.png"
+    },
+    {
+      "name": "India",
+      "descr": "India, also known as the Republic of India is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west; China, Nepal, and Bhutan to the northeast; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia. ",
+      "capital": "New Delhi",
+      "population": 1295210000,
+      "area": 3287590,
+      "coffee_quantity": 348000,
+      "countryCode": "in",
+      "flag": "https://www.countryflags.io/in/flat/64.png"
+    },
+    {
+      "name": "Uganda",
+      "descr": "Uganda, officially the Republic of Uganda, is a country in East-Central Africa. It is bordered to the east by Kenya, to the north by South Sudan, to the west by the Democratic Republic of the Congo, to the south-west by Rwanda, and to the south by Tanzania. The southern part of the country includes a substantial portion of Lake Victoria, shared with Kenya and Tanzania. Uganda is in the African Great Lakes region. Uganda also lies within the Nile basin, and has a varied but generally a modified equatorial climate.",
+      "capital": "Kampala",
+      "population": 33860700,
+      "area": 241550,
+      "coffee_quantity": 288000,
+      "countryCode": "ug",
+      "flag": "https://www.countryflags.io/ug/flat/64.png"
+    },
+    {
+      "name": "Nicaragua",
+      "descr": "Coffee production in Nicaragua has been an important part of its history and economy. It is one of the country's principal products. The areas most suitable for the cultivation of coffee have been Managua Department, Diriamba, San Marcos, Jinotepe, as well as the vicinity of Granada Department, Lake Nicaragua, Chontales Department, and in Nueva Segovia; historically, the best coffee is produced in Matagalpa and in Jinotega. Most of the coffee was grown in Managua Department, but Matagalpa Department produced the best bean quality. The best altitude to grow coffee is 800 meters above the sea level.",
+      "capital": "Managua",
+      "population": 6262703,
+      "area": 130373,
+      "coffee_quantity": 132000,
+      "countryCode": "ni",
+      "flag": "https://www.countryflags.io/ni/flat/64.png"
+    },
+    {
+      "name": "China",
+      "descr": "China, officially the People's Republic of China (PRC), is a country in East Asia and the world's most populous country, with a population of around 1.404 billion. Covering approximately 9,600,000 square kilometers (3,700,000 sq mi), it is the third- or fourth-largest country by total area. Governed by the Communist Party of China, the state exercises jurisdiction over 22 provinces, five autonomous regions, four direct-controlled municipalities (Beijing, Tianjin, Shanghai, and Chongqing), and the special administrative regions of Hong Kong and Macau.",
+      "capital": "Beijing",
+      "population": 1377422166,
+      "area": 9640011,
+      "coffee_quantity": 116820,
+      "countryCode": "cn",
+      "flag": "https://www.countryflags.io/cn/flat/64.png"
+    },
+    {
+      "name": "Ivory Coast",
+      "descr": "Ivory Coast or Côte d'Ivoire, officially the Republic of Côte d'Ivoire, is a country located on the south coast of West Africa. Ivory Coast's political capital is Yamoussoukro in the centre of the country, while its economic capital and largest city is the port city of Abidjan. It borders Guinea and Liberia to the west, Burkina Faso and Mali to the north, Ghana to the east, and the Gulf of Guinea (Atlantic Ocean) to the south.",
+      "capital": "Yamoussoukro",
+      "population": 22671331,
+      "area": 322463,
+      "coffee_quantity": 108000,
+      "countryCode": "ci",
+      "flag": "https://www.countryflags.io/ci/flat/64.png"
+    },
+    {
+      "name": "Costa Rica",
+      "descr": "Costa Rica, officially the Republic of Costa Rica (Spanish: República de Costa Rica), is a country in Central America, bordered by Nicaragua to the north, the Caribbean Sea to the northeast, Panama to the southeast, the Pacific Ocean to the southwest, and Ecuador to the south of Cocos Island. It has a population of around 5 million[4] in a land area of 51,060 square kilometers (19,714 square miles). An estimated 333,980 people live in the capital and largest city, San José with around 2 million people in the surrounding metropolitan area.",
+      "capital": "San José",
+      "population": 4890379,
+      "area": 51100,
+      "coffee_quantity": 89520,
+      "countryCode": "cr",
+      "flag": "https://www.countryflags.io/cr/flat/64.png"
+    },
+    {
+      "name": "Kenya",
+      "descr": "Nairobi is the capital and the largest city of Kenya. The name comes from the Maasai phrase Enkare Nairobi, which translates to cool water, a reference to the Nairobi River which flows through the city. The city proper had a population of 3,138,369 in the 2009 census, while the metropolitan area has a population of 6,547,547. The city is popularly referred to as the Green City in the Sun.",
+      "capital": "Nairobi",
+      "population": 47251000,
+      "area": 580367,
+      "coffee_quantity": 49980,
+      "countryCode": "ke",
+      "flag": "https://www.countryflags.io/ke/flat/64.png"
+    }
+  ]
+}

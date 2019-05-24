@@ -3,12 +3,26 @@ import { buildURI } from './functions'
 
 const host = '172.16.97.58'
 
+const shortenCall = (route, body) => {
+  return API_CALL(buildURI(host, serverPort, route), body ? {
+    method: 'POST',
+    body: JSON.stringify(body)
+  } : undefined)
+}
+
 export const API_PREFIX = apiPrefix
 export const API_ROUTES = {
   ping: `${API_PREFIX}/`,
   login: `${API_PREFIX}/login`,
   register: `${API_PREFIX}/register`,
   profile: id => `${API_PREFIX}/profile${id ? `/${id}` : ''}`,
+
+  countries: `${API_PREFIX}/countries`,
+
+  offers: `${API_PREFIX}/exporter/offers`,
+
+  getOrders: `${API_PREFIX}/orders`,
+  createOrders: orderId => `${API_PREFIX}/order/${orderId}`,
 
   // Examples
   example: (queryParam1, queryParam2 = false) => `${API_PREFIX}/example?${new URLSearchParams({ queryParam1, queryParam2 })}`,
@@ -115,6 +129,22 @@ export const profile = id => {
   return API_CALL(buildURI(host, serverPort, API_ROUTES.profile(id)))
 }
 
+export const countries = () => shortenCall(API_ROUTES.countries)
+
+export const getOffers = () => shortenCall(API_ROUTES.offers)
+export const createOffer = (coffeeType, originCountryCode, amount, bagPrice) =>
+  shortenCall(API_ROUTES.offers, {
+    coffeeType,
+    originCountryCode,
+    amount,
+    bagPrice
+  })
+
+export const getOrders = () => shortenCall(API_ROUTES.getOrders)
+export const createOrder = (orderId, newProgressState) =>
+  shortenCall(API_ROUTES.createOrders(orderId), {
+    newProgressState
+  })
 
 export default {
   API_CALL,
@@ -122,5 +152,6 @@ export default {
   login,
   logout,
   register,
-  profile
+  profile,
+  countries
 }
