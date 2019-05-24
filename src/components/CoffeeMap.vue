@@ -54,40 +54,48 @@ export default {
   methods: {
     options(countries = this.$props.countries) {
       let maxTotal = 0
-      const values = (countries || []).reduce((values, { countryCode: code, population, area, coffee_quantity: total }) => {
-        values[code.toUpperCase()] = {
-          population,
-          area,
-          total
-        }
-        if (maxTotal < total)
-          maxTotal = total
+      const values = (countries || []).reduce((values, country) => {
+        values[country.countryCode.toUpperCase()] = {
+          ...country, 
+          robusta : (country.robusta * 100 || 0),
+          arabica : ((1 - country.robusta) * 100 || 0)
+        };
+        if (maxTotal < country.coffee_quantity)
+          maxTotal = country.coffee_quantity
         return values
       }, {})
       return {
         targetElementID: 'coffee-map',
+        colorMax: '#5010B0',
+        colorMin: '#B070FF',
+        colorNoData: '#BBB',
         data: {
           data: {
-            area: {
+            /* coffee_quantity: {
               thousandSeparator: ' ',
-              name: 'Surface',
-              format: '{0}'
-            },
-            population: {
+              name: 'Total Production',
+              format: '{0} Tons'
+            }, */
+            arabica: {
               thousandSeparator: ' ',
-              name: 'Population',
-              format: '{0}'
+              name: 'Arabica',
+              format: '{0} %'
             },
-            total: {
-              name: 'Total',
-              format: '{0} %',
+            robusta: {
+              thousandSeparator: ' ',
+              name: 'Robusta',
+              format: '{0} %'
+            },
+            coffee_quantity: {
+              name: 'Production',
+              format: '{0} Tons of Coffee',
               thousandSeparator: ' ',
 
               thresholdMax: maxTotal,
               thresholdMin: 0
             }
           },
-          applyData: 'total',
+          applyData: 'coffee_quantity',
           values
         }
       }
