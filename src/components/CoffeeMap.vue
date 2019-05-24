@@ -3,6 +3,8 @@
 </template>
 
 <script>
+const elementId = 'coffee-map'
+
 export default {
   name: 'CoffeeMap',
   props: {
@@ -49,6 +51,14 @@ export default {
   },
   mounted() {
     /* eslint no-undef:0  */
+    const root = document.getElementById(elementId)
+    root.addEventListener('wheel', e => {
+      e.preventDefault()
+      e.returnValue = false
+    }, {
+      capture: true,
+      passive: false
+    })
     this.map = new svgMap(this.options())
   },
   methods: {

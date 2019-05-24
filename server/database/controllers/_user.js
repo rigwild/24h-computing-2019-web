@@ -103,6 +103,8 @@ export default CustomModel => ({
    */
   async find(userId) {
     let user = await CustomModel.findById(userId)
+    if (!user) throw new Error('User not found.')
+
     user.__v = undefined
     return user
   }
