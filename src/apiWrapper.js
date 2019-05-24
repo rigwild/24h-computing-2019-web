@@ -153,5 +153,12 @@ export default {
   logout,
   register,
   profile,
-  countries
+
+  countries,
+
+  getOffers,
+  createOffer,
+
+  getOrders,
+  createOrder
 }
