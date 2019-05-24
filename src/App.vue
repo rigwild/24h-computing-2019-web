@@ -22,8 +22,8 @@
 
       <b-button-group v-if="loggedIn && userData.role === 'exporter'" class="mx-auto align-self-stretch nav-container">
         <!-- <b-button disabled size="sm">Exporter</b-button> -->
-        <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Orders</b-button>
-        <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Products</b-button>
+        <b-button :to="{ name: 'Orders' }" size="sm" class="nav-btn">Orders</b-button>
+        <b-button :to="{ name: 'Offers' }" size="sm" class="nav-btn">Products</b-button>
         <b-button :to="{ name: 'Profile' }" size="sm" class="nav-btn">Profile</b-button>
 
       </b-button-group>
@@ -50,7 +50,7 @@
         <router-view :key="$route.fullPath"/>
         <!--/ View injected here -->
       </transition>
-    <footer-comp />
+    <footer-comp class="footer-comp"/>
     </div>
     <!--/ Pages content -->
   </div>

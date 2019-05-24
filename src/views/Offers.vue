@@ -1,5 +1,8 @@
 <template>
 <div class="mt-5">
+    <div class="d-flex justify-content-around add-btn-container">
+      <b-button class="add-btn btn-pink">Add an offer</b-button>
+    </div>
     <ul>
       <li v-for="(offer,index) of offers" :key="offer.coffeeType">
         <div class="offer-card">
@@ -10,15 +13,18 @@
             Price: ${{ offer.bagPrice }}
           </div>
           <div class="offer-origine">
-            Origine: ${{ offer.originCountryCode}}
+            Origin: {{ offer.originCountryCode }}
           </div>
           <div class="offer-amount">
-            Amount: ${{ offer.oamount}}
+            Amount: {{ offer.real }}
           </div>
         </div>
-        <hr v-if="index+1 < countries.length">
+        <hr v-if="index+1 < offers.length">
       </li>
     </ul>
+    <div class="d-flex justify-content-around add-btn-container">
+      <b-button class="add-btn btn-pink">Add an offer</b-button>
+    </div>
   </div>
 </template>
 
@@ -38,11 +44,16 @@ export default {
   },
   data() {
     return {
-      offers: null
+      offers: []
     }
   },
-  mounted() {
-    this.offers = await apiWrapper.;
+  async mounted() {
+    this.offers = await apiWrapper.getOffers();
+  },
+  methods: {
+    async createOffer() {
+      await apiWrapper.createOffer();
+    }
   }
 }
 </script>
