@@ -1,3 +1,23 @@
+# KOFFEE'LEEIS Project ☕️
+
+How to login : 
+Go on [http://172.16.97.58:8080/#/](http://172.16.97.58:8080/#/)
+
+
+Credentials : 
+
+### As Exporter : 
+
+- **Login** : exporter
+
+- **Password** : exporter
+
+### As Importer :
+- **Login** : importer
+
+- **Password** : importer
+
+
 # vue-express-ws-mongo-boilerplate
 A web app to ...
 
