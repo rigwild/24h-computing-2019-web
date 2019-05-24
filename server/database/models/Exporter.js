@@ -18,11 +18,11 @@ const coffeeType = {
 
 export default mongoose.model('Exporter', new Schema({
   ..._user,
-  stocks: [
+  offers: [
     {
-      offerId: {
-        type: String,
-        required: true
+      active: {
+        type: Boolean,
+        default: true
       },
       coffeeType,
       originCountryCode: {
@@ -36,6 +36,10 @@ export default mongoose.model('Exporter', new Schema({
       real: {
         ...integerOnly,
         required: true
+      },
+      bagPrice: {
+        ...integerOnly,
+        required: true
       }
     }
   ],
@@ -43,9 +47,9 @@ export default mongoose.model('Exporter', new Schema({
     {
       progress: {
         type: String,
-        enum: ['pending', 'preparation', 'sentPending', 'sent', 'finished'],
-        required: true,
-        default: 'pending'
+        enum: ['pendingValidation', 'preparation', 'sentPending', 'sent', 'finished', 'cancelled'],
+        required: false,
+        default: 'pendingValidation'
       },
       startedDate: {
         type: Date,
@@ -61,6 +65,10 @@ export default mongoose.model('Exporter', new Schema({
         required: true
       },
       importerId: {
+        type: String,
+        required: true
+      },
+      fromOfferId: {
         type: String,
         required: true
       }

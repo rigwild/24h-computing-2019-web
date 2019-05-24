@@ -3,6 +3,8 @@
 </template>
 
 <script>
+const elementId = 'coffee-map'
+
 export default {
   name: 'CoffeeMap',
   props: {
@@ -49,23 +51,31 @@ export default {
   },
   mounted() {
     /* eslint no-undef:0  */
+    const root = document.getElementById(elementId)
+    root.addEventListener('wheel', e => {
+      e.preventDefault()
+      e.returnValue = false
+    }, {
+      capture: true,
+      passive: false
+    })
     this.map = new svgMap(this.options())
   },
   methods: {
     options(countries = this.$props.countries) {
       let maxTotal = 0
-      const values = (countries || []).reduce((values, { countryCode: code, population, area, coffee_quantity: total }) => {
-        values[code.toUpperCase()] = {
+      const values = (countries || []).reduce((acc, { countryCode: code, population, area, coffee_quantity: total }) => {
+        acc[code.toUpperCase()] = {
           population,
           area,
           total
         }
         if (maxTotal < total)
           maxTotal = total
-        return values
+        return acc
       }, {})
       return {
-        targetElementID: 'coffee-map',
+        targetElementID: elementId,
         data: {
           data: {
             area: {
