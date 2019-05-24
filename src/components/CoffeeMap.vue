@@ -16,7 +16,7 @@ export default {
   },
   watch: {
     countries(newValue) {
-      this.map.applyData(Object.assign({}, {
+      this.map.applyData((this.map.options = Object.assign({}, {
 
         // The element to render the map in
         targetElementID: '',
@@ -44,7 +44,7 @@ export default {
 
         // The URL to the flags when using flag type 'image', {0} will get replaced with the lowercase country id
         flagURL: 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg'
-      }, (this.map.options = this.options(newValue))).data)
+      }, this.options(newValue))).data)
     }
   },
   mounted() {
@@ -53,6 +53,17 @@ export default {
   },
   methods: {
     options(countries = this.$props.countries) {
+      let maxTotal = 0
+      const values = (countries || []).reduce((values, { countryCode: code, population, area, coffee_quantity: total }) => {
+        values[code.toUpperCase()] = {
+          population,
+          area,
+          total
+        }
+        if (maxTotal < total)
+          maxTotal = total
+        return values
+      }, {})
       return {
         targetElementID: 'coffee-map',
         data: {
@@ -72,19 +83,12 @@ export default {
               format: '{0} %',
               thousandSeparator: ' ',
 
-              thresholdMax: 100,
+              thresholdMax: maxTotal,
               thresholdMin: 0
             }
           },
           applyData: 'total',
-          values: (countries || []).reduce((values, { countryCode: code, population, area, coffee_quantity: total }) => {
-            values[code.toUpperCase()] = {
-              population,
-              area,
-              total
-            }
-            return values
-          }, {})
+          values
         }
       }
     }
