@@ -1,10 +1,10 @@
 <template>
-<div class="mt-5">
+  <div class="mt-5">
     <div class="d-flex justify-content-around add-btn-container">
       <b-button class="add-btn btn-pink">Add an offer</b-button>
     </div>
     <ul>
-      <li v-for="(offer,index) of offers" :key="offer.coffeeType">
+      <li v-for="(offer,index) of offers" :key="index">
         <div class="offer-card">
           <div class="offer-type">
             Type: {{ offer.coffeeType }}
@@ -48,11 +48,11 @@ export default {
     }
   },
   async mounted() {
-    this.offers = await apiWrapper.getOffers();
+    this.offers = await apiWrapper.getOffers()
   },
   methods: {
     async createOffer() {
-      await apiWrapper.createOffer();
+      await apiWrapper.createOffer()
     }
   }
 }

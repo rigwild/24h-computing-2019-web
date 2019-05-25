@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="container" style="margin-top:7%;">
+    <div class="container" style="margin-top:7%;">
       <b-card header="Profile">
         <Promised v-if="profilePromise" :promise="profilePromise">
           <template v-slot:pending>
@@ -8,11 +8,11 @@
           </template>
           <template v-slot="data">
             <div class="container">
-              <p>Username : {{  data.username  }}</p><hr>
-              <p>Role : {{  data.role  }}</p><hr>
-              <p>Adress : {{  data.address.street.number  }},{{  data.address.street.name  }} {{  data.address.city  }} {{  data.address.postalCode  }}</p><hr>
-              <p>Country : {{  data.address.countryCode  }}</p><hr>
-              <p>Phone : {{  data.phone }}</p>
+              <p>Username : {{ data.username }}</p><hr>
+              <p>Role : {{ data.role }}</p><hr>
+              <p>Adress : {{ data.address.street.number }},{{ data.address.street.name }} {{ data.address.city }} {{ data.address.postalCode }}</p><hr>
+              <p>Country : {{ data.address.countryCode }}</p><hr>
+              <p>Phone : {{ data.phone }}</p>
             </div>
           </template>
           <template v-slot:rejected="error">

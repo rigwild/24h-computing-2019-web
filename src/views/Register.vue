@@ -23,6 +23,64 @@
             />
           </b-form-group>
 
+          <b-form-group id="input-group-2">
+            <b-form-select v-model="role" :options="[{ value: 'importer', text: 'importer' }, { value: 'exporter', text: 'exporter' }]" />
+          </b-form-group>
+
+
+          <b-form-group id="input-group-1">
+            Address<br>
+            <b-form-input
+              id="input-1"
+              v-model="street.number"
+              type="text"
+              required
+              placeholder="Street number (ex: 12 bis)"
+            />
+
+            <b-form-input
+              id="input-1"
+              v-model="street.name"
+              type="text"
+              required
+              placeholder="Street name"
+            />
+
+            <b-form-input
+              id="input-1"
+              v-model="postalCode"
+              type="text"
+              required
+              placeholder="Postal code"
+            />
+
+            <b-form-input
+              id="input-1"
+              v-model="city"
+              type="text"
+              required
+              placeholder="City"
+            />
+
+            <b-form-input
+              id="input-1"
+              v-model="countryCode"
+              type="text"
+              required
+              placeholder="Country code (ex: FR)"
+            />
+          </b-form-group>
+
+          <b-form-group id="input-group-1">
+            <b-form-input
+              id="input-1"
+              v-model="phone"
+              type="text"
+              required
+              placeholder="Phone"
+            />
+          </b-form-group>
+
           <ButtonLoading :loading="loadingMessage" type="submit">Register</ButtonLoading>
         </b-form>
 
@@ -45,6 +103,15 @@ export default {
     return {
       username: '',
       password: '',
+      role: '',
+      phone: '',
+      street: {
+        number: '',
+        name: ''
+      },
+      city: '',
+      postalCode: '',
+      countryCode: '',
 
       loadingMessage: null,
       errorMessage: null
@@ -56,7 +123,7 @@ export default {
       this.loadingMessage = 'Registering...'
       this.errorMessage = null
       try {
-        await apiWrapper.register(this.username, this.password)
+        await apiWrapper.register(this.username, this.password, this.role, this.street, this.postalCode, this.countryCode, this.phone, this.city)
         this.$router.push({ name: 'Login' })
       }
       catch (err) {
